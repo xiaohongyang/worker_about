@@ -1,0 +1,120 @@
+/*reset*/
+    *,
+    *:before,
+    *:after {
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-tap-highlight-color: transparent;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html { -webkit-text-size-adjust: 100%;}
+
+    body, ul, ol, li, dl, dt, dd, p, h1, h2, h3, h4, h5, h6, form, input { margin: 0; padding: 0;}
+    ul, ol { list-style: none;}
+    i, em { font-style: normal;}
+    a { text-decoration: none;}
+    img { border: none;}
+    table { border-spacing: 0; table-layout: fixed;}
+
+    body { position: relative; font: 14px/1.5 BlinkMacSystemFont, PingFangSC-Regular, "Segoe UI", "Helvetica Neue", "微软雅黑", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; word-wrap: break-word;}
+    
+.clearfix:before,
+.clearfix:after { display: table; visibility: hidden; height: 0; content: ' ';}
+.clearfix:after { clear: both;}
+
+/* 总体布局 */
+html,
+body { min-width: 1280px;}
+.layout-inner { width: 1280px; margin: 0 auto;}
+
+/* banner */
+.banner-cont { background: url(../img/banner.jpg) no-repeat top center;}
+.banner-cont .layout-inner { position: relative; height: 800px;}
+.banner-cont .phone { position: absolute; top: 225px; left: 206px;}
+.banner-cont .logo { position: absolute; top: 49px; left: 75px;}
+.banner-cont .logo img { width: 100%; vertical-align: top;}
+.banner-cont .download { position: absolute; top: 570px; right: 300px; width: 300px; height: 80px; background: #fff; border: 1px solid #fff; border-radius: 8px; text-indent: 110px; font-size: 30px; line-height: 78px; color: #00a6cb; font-size: 30px;}
+.banner-cont .download:before { position: absolute; left: 40px; top: 50%; margin-top: -21px; width: 42px; height: 42px; background: url(../img/ico_download.png) no-repeat; background-size: contain; content: '';}
+.banner-cont .desc { position: absolute; top: 330px; left: 556px;}
+.banner-cont .desc h2 { font-size: 54px; color: #fff; font-weight: normal;}
+.banner-cont .desc .img img { width: 100%; vertical-align: top;}
+
+/*介绍*/
+.intro-cont .layout-inner { padding: 195px 0;}
+.intro-cont ul { overflow: hidden;}
+.intro-cont li { float: left; margin: 0 0 0 140px; width: 250px; text-align: center;}
+.intro-cont .img { height: 64px;}
+.intro-cont img { vertical-align: top;}
+.intro-cont h3 { margin: 40px 0 14px; font-size: 30px; color: #333; font-weight: normal;}
+.intro-cont .desc { font-size: 18px; color: #666; line-height: 1.8;}
+
+/*下载*/
+.download-cont { background: #0e0306;}
+.download-cont .layout-inner { padding: 118px 0 70px;}
+.download-cont .qr-code { margin: 0 0 75px; text-align: center; font-size: 16px; color: #fff;}
+.download-cont .qr-code .img { margin: 0 0 10px;}
+.download-cont .link { text-align: center;}
+.download-cont .link a { display: inline-block; position: relative; margin: 0 40px; padding: 0 0 0 129px; width: 400px; height: 90px; border: 1px solid #fff; border-radius: 8px; color: #fff; font-size: 30px; line-height: 88px; text-align: left;}
+.download-cont .link a:before,
+.download-cont .link a:after { position: absolute; top: 50%; content: '';}
+.download-cont .link a:before { left: 54px; margin-top: -22px; width: 40px; height: 44px;}
+.download-cont .link a:after { right: 52px; margin-top: -19px; width: 22px; height: 38px; background: url(../img/arrow.png) no-repeat; background-size: contain;}
+.download-cont .link .ios:before { background: url(../img/iOS.png) no-repeat; background-size: contain;}
+.download-cont .link .android:before { background: url(../img/android.png) no-repeat ; background-size: contain;}
+
+/*footer*/
+.footer-cont { background: #0e0306 url(../img/line.png) no-repeat top center;}
+.footer-cont .layout-inner { padding: 45px 0;}
+.footer-cont .copyright { font-size: 14px; color: #fff; text-align: center;}
+
+@media screen and (max-width:960px) {
+    html,
+    body { min-width: 481px;}
+    .layout-inner { width: auto;}
+
+    /* banner */
+    .banner-cont { background-size: cover;}
+    .banner-cont .layout-inner { height: 500px;}
+    .banner-cont .phone { display: none;}
+    .banner-cont .logo { width: 300px; top: 25px; left: 40px;}
+    .banner-cont .download { top: 350px; right: auto; left: 50%; margin: 0 0 0 -150px; border-radius: 4px;}
+    .banner-cont .desc { top: 200px; left: 50%; margin: 0 0 0 -180px;}
+    .banner-cont .desc h2 { font-size: 40px;}
+    .banner-cont .desc .img { width: 360px;}
+
+    /*介绍*/
+    .intro-cont .layout-inner { padding: 60px 0 10px;}
+    .intro-cont li { float: none; margin: 0 auto 50px;}
+    .intro-cont .img { height: auto;}
+
+    /*下载*/
+    .download-cont .layout-inner { padding: 80px 0 30px;}
+    .download-cont .qr-code { margin: 0 0 40px;}
+    .download-cont .link a { display: block; margin: 0 auto 30px; border-radius: 4px;}
+}
+
+@media screen and (max-width:480px) {
+    html,
+    body { min-width: 320px;}
+
+    /* banner */
+    .banner-cont .layout-inner { height: 400px;}
+    .banner-cont .logo { width: 250px; top: 20px; left: 30px;}
+    .banner-cont .download { top: 300px; width: 200px; height: 60px; margin: 0 0 0 -100px; text-indent: 70px; font-size: 20px; line-height: 58px;}
+    .banner-cont .download:before { left: 22px; margin-top: -14px; width: 28px; height: 28px;}
+    .banner-cont .desc { top: 160px; margin: 0 0 0 -140px;}
+    .banner-cont .desc h2 { font-size: 28px;}
+    .banner-cont .desc .img { width: 280px;}
+    
+    /*介绍*/
+    .intro-cont h3 { font-size: 24px;}
+    .intro-cont .desc { font-size: 14px;}
+
+    /*下载*/
+    .download-cont .qr-code .img { margin: 0 auto 10px; width: 220px;}
+    .download-cont .qr-code img { width: 100%;}
+    .download-cont .link a { margin-bottom: 20px; padding-left: 60px; width: 200px; height: 60px; line-height: 58px; font-size: 18px;}
+    .download-cont .link a:before { left: 20px; margin-top: -18px; width: 30px; height: 33px;}
+    .download-cont .link a:after { right: 20px; margin-top: -10px; width: 11px; height: 19px;}
+}
